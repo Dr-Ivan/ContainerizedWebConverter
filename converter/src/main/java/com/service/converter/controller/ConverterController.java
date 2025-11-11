@@ -23,12 +23,12 @@ public class ConverterController {
 
     @PostMapping("/morseEncode")
     public String morseEncode(@RequestBody String txt){
-        return model.convertToCode(txt);
+        return model.convertToMorseCode(txt);
     }
 
     @PostMapping("/morseDecode/{language}")
     public String morseEncode(@RequestBody String txt, @PathVariable String language){
-        return model.convertToText(txt, language);
+        return model.convertMorseCodeToText(txt, language);
     }
 
 }
